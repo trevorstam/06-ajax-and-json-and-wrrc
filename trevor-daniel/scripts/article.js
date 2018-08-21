@@ -51,7 +51,7 @@ Article.fetchAll = () => {
     articleView.initIndexPage();
   } else {
     //get the json from liveserver url, gets into the data folder and grabs the hackerIpsum.json
-    $.getJSON('http://127.0.0.1:5500/data/hackerIpsum.json')
+    $.getJSON('data/hackerIpsum.json')
       .then(
         data => {
           // this is setting the data from the json into local storage.
