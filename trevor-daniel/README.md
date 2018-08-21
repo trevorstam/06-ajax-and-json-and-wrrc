@@ -16,11 +16,18 @@ Download our code, and run it in a server environment.
 Ajax, JSON, jQuery, random bits of JavaScript, and HTML. The template is created with Handlebars.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+Author: Daniel Frey <dann.frey@me.com>
+Date:   Tue Aug 21 10:41:52 2018 -0700 - added comments / readme
+
+Author: trevorstam <trevorstam@gmail.com>
+Date:   Tue Aug 21 10:26:45 2018 -0700 - initialized ajax call to local storage, finished coding bit
+
+Author: trevorstam <trevorstam@gmail.com>
+Date:   Tue Aug 21 09:24:57 2018 -0700 - first commit
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+<!-- Thanks Katy for pushing us in the rifght direction for our function!  -->
 -->
 ```
