@@ -12,6 +12,8 @@ function Article (rawDataObj) {
 // REVIEW: Instead of a global `articles = []` array, let's attach this list of all articles directly to the constructor function. Note: it is NOT on the prototype. In JavaScript, functions are themselves objects, which means we can add properties/values to them at any time. In this case, the array relates to ALL of the Article objects, so it does not belong on the prototype, as that would only be relevant to a single instantiated Article.
 Article.all = [];
 
+// let rawData;
+
 // COMMENT: Why isn't this method written as an arrow function?
 // PUT YOUR RESPONSE HERE
 Article.prototype.toHtml = function() {
@@ -45,9 +47,22 @@ Article.fetchAll = () => {
   // REVIEW: What is this 'if' statement checking for? Where was the rawData set to local storage?
   if (localStorage.rawData) {
 
-    Article.loadAll();
+    Article.loadAll(JSON.parse(localStorage.rawData));//added data as param. Didn't work
+    articleView.initIndexPage();
+
 
   } else {
+    //get the json from liveserver url, gets into the data folder and grabs the hackerIpsum.json
+    $.getJSON('http://127.0.0.1:5500/data/hackerIpsum.json')
+      .then(
+        data => {
+          localStorage.setItem('rawData', JSON.stringify(data));
+          Article.loadAll(data);
 
+          articleView.initIndexPage();
+
+        })
   }
+
 }
+
